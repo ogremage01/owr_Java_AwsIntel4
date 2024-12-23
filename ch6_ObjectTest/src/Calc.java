@@ -5,26 +5,37 @@
 public class Calc {
 
 	void add(int a, int b) {
-		System.out.println(a + " + " + b + " = " + (a + b));
+		int result = a + b;
+		String view = "";
+		view = a + " + " + b + " = " + (a + b);
+		System.out.println(view);
 	}
-	
-	void add(double a, double b) {
-		
-	}
-	
+
 	void subtract(int a, int b) {
-		System.out.println(a + " - " + b + " = " + (a - b));
+		int result = a - b;
+		String view = "";
+		view = a + " - " + b + " = " + (a - b);
+		System.out.println(view);
 	}
+
 	void multifly(int a, int b) {
-		System.out.println(a + " * " + b + " = " + (a * b));
+		int result = a * b;
+		String view = "";
+		view = a + " * " + b + " = " + (a - b);
+		System.out.println(view);
 	}
+
 	void divide(int a, int b) {
-		if(b==0) {
+		if (b == 0) {
 			System.out.print("0으로 나눌 수 없습니다.\t0");
-		}
-		else {
-			System.out.println(a + " / " + b + " = " + (int)(((a*1.0/b)+0.009)*100)/100.0);
-		}
+			return;
+			}
+			double result = (int) (((a * 1.0 / b) + 0.009) * 100) / 100.0;
+			String view = "";
+			view = a + " / " + b + " = " + (int) (((a * 1.0 / b) + 0.009) * 100) / 100.0;
+			System.out.println(view);
+		
+
 	}
 
 }
