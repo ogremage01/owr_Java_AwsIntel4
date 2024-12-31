@@ -1,9 +1,7 @@
 package hk.exam.four;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 public class LottoService {
 	// 인스턴스의 변수는 배열 or 컬렉션 클래스 둘 중 하나만 이용

@@ -24,6 +24,15 @@ public class SilenceTv extends Tv {
 				+ "]";
 	}
 
+
+
+	@Override
+	public void powerButton() {
+		// TODO Auto-generated method stub
+		power = !power;
+		
+	}
+
 	
 
 	

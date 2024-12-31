@@ -61,7 +61,10 @@ public class Player {
 	
 	// 게임에 이용할 카드를 뽑는다
 	public Card[] drawCard() {
-		
+		Card deck = new Card();
+		deck.init();
+		shuffle();
+
 		// 내가 가진 전체 카드
 
 		// 카드 2장을 뽑는다 
