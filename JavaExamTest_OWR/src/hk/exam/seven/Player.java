@@ -8,6 +8,7 @@ public class Player {
 	private boolean winner = false; // 승자가 누구인지 기록 (true 승자, false 패자)
 	private Card[] myChoiceCards = null; // 내가 선택한 2장의 카드
 	
+	private CardCase deck = new CardCase();
 
 	// 생성자 (멤버변수 초기화)
 	public Player(String name, int age) {
@@ -61,7 +62,6 @@ public class Player {
 	
 	// 게임에 이용할 카드를 뽑는다
 	public Card[] drawCard() {
-		Card deck = new Card();
 		deck.init();
 		shuffle();
 
@@ -74,6 +74,7 @@ public class Player {
 
 	// 카드 섞기
 	public void shuffle() {
+		
 		
 		// 카드덱에 들어있는 52장의 카드들을 잘 섞어준다.
 		

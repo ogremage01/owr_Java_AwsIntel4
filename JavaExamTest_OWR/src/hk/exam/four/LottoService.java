@@ -2,6 +2,7 @@ package hk.exam.four;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class LottoService {
 	// 인스턴스의 변수는 배열 or 컬렉션 클래스 둘 중 하나만 이용
@@ -51,20 +52,40 @@ public class LottoService {
 
 		if (sequence) { // 오름차순 정렬
 			System.out.println("오름차순");
-			Arrays.sort(luckyBall);
+//			Arrays.sort(luckyBall);
+			for (int i = 0; i < luckyBall.length; i++) {
+				for (int j = 0; j < luckyBall.length - 1; j++) {
+					int temp = 0;
+					if (luckyBall[j] > luckyBall[j + 1]) {
+						temp = luckyBall[j];
+						luckyBall[j] = luckyBall[j + 1];
+						luckyBall[j + 1] = temp;
+					}
+				}
+			}
 			for (int i = 0; i < 6; i++) {
 				System.out.print(luckyBall[i] + " ");
 			}
 			System.out.println();
 
-		} else { // 내림차순 정렬
+		} else if (sequence == false) { // 내림차순 정렬
 			System.out.println("내림차순");
-			Arrays.sort(luckyBall);
-			for (int i = 5; i >= 0; i--) {
-				System.out.print(luckyBall[i] + " ");
+			for (int i = 0; i < luckyBall.length; i++) {
+				for (int j = 0; j < luckyBall.length - 1; j++) {
+					int temp = 0;
+					if (luckyBall[j] < luckyBall[j + 1]) {
+						temp = luckyBall[j];
+						luckyBall[j] = luckyBall[j + 1];
+						luckyBall[j + 1] = temp;
+					}
+				}
+
 			}
-			System.out.println();
+			for (int i = 0; i < 6; i++) {
+				System.out.print(luckyBall[i] + " ");
+			}System.out.println();
 		}
+		
 
 	}
 
