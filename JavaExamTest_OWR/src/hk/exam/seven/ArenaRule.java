@@ -1,5 +1,7 @@
 package hk.exam.seven;
 
+import java.util.HashMap;
+
 public class ArenaRule {
 
 	// 2장의 카드 합산 결과를 돌려준다
@@ -12,6 +14,25 @@ public class ArenaRule {
 		// 카드 2장의 합산 결과 반환
 		// A카드는 1, T카드는 10, J카드는 11, Q카드는 12, K카드는 13점이며
 		// 나머지 카드는 숫자의 의미대로 점수를 부여한다. ex) 2카드는 2점
+		HashMap<String, Integer> scoreMap = new HashMap<String, Integer>();
+		scoreMap.put("A", 1);
+		scoreMap.put("2", 2);
+		scoreMap.put("3", 3);
+		scoreMap.put("4", 4);
+		scoreMap.put("5", 5);
+		scoreMap.put("6", 6);
+		scoreMap.put("7", 7);
+		scoreMap.put("8", 8);
+		scoreMap.put("9", 9);
+		scoreMap.put("T", 10);
+		scoreMap.put("J", 11);
+		scoreMap.put("Q", 12);
+		scoreMap.put("K", 13);
+		
+		scoreSum+=scoreMap.get(cardArr[0].getCard().substring(1));
+		scoreSum+=scoreMap.get(cardArr[1].getCard().substring(1));
+//		scoreSum += scoreMap.get(card.substring(1));//getCard?
+		
 		
 
 		return scoreSum;

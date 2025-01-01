@@ -31,7 +31,29 @@ public class FreeShop {
 	 * @param ?? 어떤 상품을 살까
 	 * @throws CloneNotSupportedException
 	 */
-	
+	public void buy(Customer a, Product b) {
+		while(true) {
+			if (b==null) {
+				System.out.println("재고가 없습니다");
+				break;
+			}else if(b!=null) {
+				if(a.getMoney()<b.price) {
+					System.out.println("자산이 충분하지 않습니다.");
+					break;}
+				else if(a.getMoney()>=b.price) {
+					System.out.println(b.name + " 구매 완료");
+					a.setMoney(a.getMoney()-b.price);//지불
+					a.setMyBonusPoint(a.getMyBonusPoint()+b.bonusPoint);//보너스포인트 획득
+					a.setProduct(b);//구매자 제품획득
+//					this. = null;//매장 재고 수정
+					storeMoney+=b.price;//매출기록
+					
+					break;
+				}
+			}
+		}
+		
+	}
 		
 		// 물건이 존재하는지 여부
 		

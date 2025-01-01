@@ -1,5 +1,7 @@
 package hk.exam.nine;
 
+import java.util.List;
+
 public class GameUtil {
 	
 	public GameUtil() {
@@ -7,7 +9,7 @@ public class GameUtil {
 	}
 	
 
-	public boolean isSame(List<Integer>, int a) {
+	public boolean isSame(List<Integer> a, int b) {
 		return false;
 	}
 	
@@ -19,7 +21,7 @@ public class GameUtil {
 		return num;
 	}
 	
-	public boolean inNumberRange(int a) {
+	boolean inNumberRange(int a) {
 		return false;
 		
 	}
