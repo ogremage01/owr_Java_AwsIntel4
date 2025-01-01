@@ -45,7 +45,7 @@ public class FreeShop {
 					a.setMoney(a.getMoney()-b.price);//지불
 					a.setMyBonusPoint(a.getMyBonusPoint()+b.bonusPoint);//보너스포인트 획득
 					a.setProduct(b);//구매자 제품획득
-//					this. = null;//매장 재고 수정
+//					 = null;//매장 재고 수정
 					storeMoney+=b.price;//매출기록
 					
 					break;

@@ -4,7 +4,7 @@ public class Product implements Cloneable {
 	protected String name = ""; // 제품명
 	protected String explain = ""; // 제품설명
 	protected double price; // 제품의 가격
-	protected double bonusPoint = (int)(((price*0.0713)+0.005)*1000)/1000.0; // 제품구매 시 제공하는 보너스점수
+	protected double bonusPoint = (int)(((price*0.0713)+0.005)*100)/100.0; // 제품구매 시 제공하는 보너스점수
 
 	public Product() {
 		super();
