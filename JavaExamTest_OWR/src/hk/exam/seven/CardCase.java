@@ -36,7 +36,7 @@ public class CardCase {
 	// 카드덱의 순서와 모양을 출력
 	void cardCasePrint() {
 		for (int i = 0; i < cardList.size(); i++) {
-			System.out.print(cardList.get(i) + "\t");
+			System.out.print(cardList.get(i).getCard() + "\t");
 			if ((i + 1) % 13 == 0) {
 				System.out.println();
 			}

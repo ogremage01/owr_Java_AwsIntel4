@@ -1,7 +1,5 @@
 package hk.exam.seven;
 
-import java.util.Collections;
-
 public class Player {
 
 	private String name = ""; // 이름
@@ -67,10 +65,11 @@ public class Player {
 		// 내가 가진 전체 카드
 		// 카드 2장을 뽑는다
 		// 그리고 뽑은 카드는 다시는 사용하지 못한다. -> 카드덱에 존재하지 않는다
-		myChoiceCards[0] = cc.getCardList().get(0);
-		cc.getCardList().remove(0);
-		myChoiceCards[1] = cc.getCardList().get(0);
-		cc.getCardList().remove(0);
+		
+		for(int i=0;i<myChoiceCards.length;i++) {
+			myChoiceCards[i] = cc.getCardList().get(0);
+			cc.getCardList().remove(0);	
+		}
 		return myChoiceCards;
 
 	}
@@ -78,11 +77,18 @@ public class Player {
 	// 카드 섞기
 	public void shuffle() {
 		cc.init();
-		Collections.shuffle(cc.getCardList());
-
+		for (int i = 0; i < cc.getCardList().size(); i++) {
+			Card temp = new Card();
+			int randNum = 0;
+			randNum = (int) (Math.random() * (cc.getCardList().size()));
+			temp=cc.getCardList().get(randNum);
+			cc.getCardList().set(randNum, cc.getCardList().get(i));
+			cc.getCardList().set(i, temp); 
+			
+			
 		}
 
-	
+	}
 
 	// 카드덱에 들어있는 52장의 카드들을 잘 섞어준다.
 
