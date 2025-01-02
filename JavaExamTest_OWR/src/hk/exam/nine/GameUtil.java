@@ -21,7 +21,7 @@ public class GameUtil {
 		return num;
 	}
 	
-	boolean inNumberRange(int a) {
+	private boolean inNumberRange(int a) {
 		return false;
 		
 	}

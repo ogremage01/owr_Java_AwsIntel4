@@ -16,6 +16,7 @@ public class Player {
 		this.name = name;
 		this.age = age;
 		this.myChoiceCards = new Card[2];
+		cc.init();//분리. 원래는 셔플에 있었음
 
 	}
 
@@ -76,7 +77,7 @@ public class Player {
 
 	// 카드 섞기
 	public void shuffle() {
-		cc.init();
+		
 		for (int i = 0; i < cc.getCardList().size(); i++) {
 			Card temp = new Card();
 			int randNum = 0;

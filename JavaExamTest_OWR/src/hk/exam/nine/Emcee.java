@@ -2,12 +2,13 @@ package hk.exam.nine;
 
 import java.util.List;
 
-public class Emcee  extends Human {
+public class Emcee extends Human {
 
 	private List<Integer> firstAnswerNumberList = null;
 	private List<Integer> secondAnswerNumberList = null;
 
-	public Emcee() {
+	Emcee() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -16,15 +17,15 @@ public class Emcee  extends Human {
 	}
 
 	public void setFirstAnswerNumberList(List<Integer> a) {
-		
+
 	}
 
-	public List<Integer> getSecondAnswerNumberList(){
+	public List<Integer> getSecondAnswerNumberList() {
 		return secondAnswerNumberList;
-		}
+	}
 
 	public void setSecondAnswerNumberList(List<Integer> b) {
-		
+
 	}
 
 }

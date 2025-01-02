@@ -12,7 +12,7 @@ public class ExamMainTwo {
 		
 
 		// 사용자가 지정한 2개의 숫자 사이 만큼의 구구단 출력
-		gs.showGugudan(3,5);
+		gs.showGugudan(5,2);
 
 	}
 

@@ -75,11 +75,11 @@ public class Customer {
 		builder.append("이고, 내가 산 물건은\n");
 		
 		for (int i = 0; i < productList.size(); i++) {
-			builder.append(productList.get(i) + "\n");
+			builder.append("name="+ productList.get(i).getName()+", explain=" + productList.get(i).getExplain() + ", price="+ productList.get(i).getPrice() + ", bonusPoint=" +productList.get(i).getBonusPoint() + "\n");
 		}
 		builder.append("저런 것들이구나\n");
 		builder.append("포인트는 ");
-		builder.append(bonusRoundPrice + " 가 있네");
+		builder.append(myBonusPoint+ " 가 있네");
 		
 		return builder.toString();
 	}

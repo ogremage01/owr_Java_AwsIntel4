@@ -1,6 +1,6 @@
 package hk.exam.two;
 
-import java.util.Iterator;
+
 
 public class GugudanService {
 
@@ -22,7 +22,11 @@ public class GugudanService {
 		// “처음 숫자가 마지막 숫자보다 클 수 없습니다.”
 		if (frontIndex > lastIndex) {
 			System.out.println("처음 숫자가 마지막 숫자보다 클 수 없습니다.");
-		} else if (frontIndex <= lastIndex) {
+			return;
+		} 
+		
+		
+		else if (frontIndex <= lastIndex) {
 
 			// 몇 단이 시작되는지 출력
 			for (int i = frontIndex; i <= lastIndex; i++) {
