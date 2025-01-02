@@ -17,7 +17,6 @@ public class GameUtil {
 	
 	public int inputNum() {
 		int num=0;
-		
 		return num;
 	}
 	

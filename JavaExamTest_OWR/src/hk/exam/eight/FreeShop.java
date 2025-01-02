@@ -35,56 +35,52 @@ public class FreeShop {
 	 */
 	public void buy(Customer a, Product b) {
 
-		
-//		boolean c = true;
-//		if (b.getClass() == this.tv.getClass()) {
-//			if (this.tv == null) {
-//				c = false;
-//			} else if (b.getClass() == this.book.getClass()) {
-//				if (this.book == null) {
-//					c = false;
-//				}
-//			}
-//		} else if (b.getClass() == this.computer.getClass()) {
-//			if (this.computer == null) {
-//				c = false;
-//			}
-//		} else if (b.getClass() == this.smartPhone.getClass()) {
-//			if (this.smartPhone == null) {
-//				c = false;
-//			}
-//		}
-
-		if (c == false) {
-			System.out.println(b.name + "은 다 팔렸습니다");
-			return;
-
-		} else if (c) {
-			if (a.getMoney() < b.price) {
-				System.out.println(b.name + "제품을 구입하기에");
-				System.out.println(b.price - a.getMoney() + " 원 부족합니다.");
+		if (b instanceof Book) {
+			if (this.book == null) {
+				System.out.println(b.name + "은 다 팔렸습니다");
 				return;
+			}
 
-			} else if (a.getMoney() >= b.price) {
-				System.out.println(b.name + " 구매 완료");
-				a.setMoney(a.getMoney() - b.price);// 지불
-				a.setMyBonusPoint(a.getMyBonusPoint() + b.bonusPoint);// 보너스포인트 획득
-				a.setProduct(b);// 구매자 제품획득
-				if (b == book) {
-					this.book = null;
-				} else if (b == computer) {
-					this.computer = null;
-				} else if (b == smartPhone) {
-					this.smartPhone = null;
-				} else if (b == tv) {
-					this.tv = null;
-				}
-				storeMoney += b.price;// 매출기록
+		} else if (b instanceof Computer) {
+			if (this.computer == null) {
+				System.out.println(b.name + "은 다 팔렸습니다");
+				return;
+			}
+		} else if (b instanceof Tv) {
+			if (this.tv == null) {
+				System.out.println(b.name + "은 다 팔렸습니다");
+				return;
+			}
+		} else if (b instanceof SmartPhone) {
+			if (this.smartPhone == null) {
+				System.out.println(b.name + "은 다 팔렸습니다");
 				return;
 
 			}
 		}
 
+		if (a.getMoney() < b.price) {
+			System.out.println(b.name + "제품을 구입하기에");
+			System.out.println(b.price - a.getMoney() + " 원 부족합니다.");
+			return;
+
+		} else if (a.getMoney() >= b.price) {
+			System.out.println(b.name + " 구매 완료");
+			a.setMoney(a.getMoney() - b.price);// 지불
+			a.setMyBonusPoint(a.getMyBonusPoint() + b.bonusPoint);// 보너스포인트 획득
+			a.setProduct(b);// 구매자 제품획득
+			if (b == book) {
+				this.book = null;
+			} else if (b == computer) {
+				this.computer = null;
+			} else if (b == smartPhone) {
+				this.smartPhone = null;
+			} else if (b == tv) {
+				this.tv = null;
+			}
+			storeMoney += b.price;// 매출기록
+			return;
+		}
 	}
 
 	// 물건이 존재하는지 여부

@@ -16,7 +16,7 @@ public class Emcee extends Human {
 		return firstAnswerNumberList;
 	}
 
-	public void setFirstAnswerNumberList(List<Integer> a) {
+	public void setFirstAnswerNumberList(List<Integer> fanl) {
 
 	}
 
@@ -24,7 +24,7 @@ public class Emcee extends Human {
 		return secondAnswerNumberList;
 	}
 
-	public void setSecondAnswerNumberList(List<Integer> b) {
+	public void setSecondAnswerNumberList(List<Integer> sanl) {
 
 	}
 
