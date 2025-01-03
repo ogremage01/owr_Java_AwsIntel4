@@ -22,6 +22,7 @@ public class Tv {
 		if (power == false) {
 			power = !power;
 			System.out.println("Tv켜짐");
+			return;
 		} else if (power) {
 			System.out.println("Tv꺼짐");
 			power = !power;
@@ -38,9 +39,11 @@ public class Tv {
 			if (channel == 5) {
 				channel = 1;
 				System.out.println("현재 채널: " + channel);
+				return;
 			} else if (channel < 5) {
 				channel++;
 				System.out.println("현재 채널: " + channel);
+				return;
 			}
 		}
 	}
@@ -51,9 +54,11 @@ public class Tv {
 			if (channel == 1) {
 				channel = 5;
 				System.out.println("현재 채널: " + channel);
+				return;
 			} else if (channel > 1) {
 				channel--;
 				System.out.println("현재 채널: " + channel);
+				return;
 			}
 
 		}
@@ -65,9 +70,11 @@ public class Tv {
 			if (volume == 3) {
 				System.out.println("볼륨을 더이상 높일 수 없습니다");
 				System.out.println("현재 볼륨: " + volume);
+				return;
 			} else if (volume < 3) {
 				volume++;
 				System.out.println("현재 볼륨: " + volume);
+				return;
 			}
 		}
 	}
@@ -78,9 +85,11 @@ public class Tv {
 			if (volume == 0) {
 				System.out.println("볼륨을 더이상 낮출 수 없습니다");
 				System.out.println("현재 볼륨: " + volume);
+				return;
 			} else if (volume > 0) {
 				volume--;
 				System.out.println("현재 볼륨: " + volume);
+				return;
 			}
 		}
 	}
@@ -93,9 +102,11 @@ public class Tv {
 				previousVolume = volume;
 				volume = 0;
 				System.out.println("----음소거 모드 사용중----");
-			} else {
+				return;
+			} else if(silence==false) {
 				volume = previousVolume;
 				System.out.println("----음소거 모드 종료----");
+				return;
 			}
 		}
 	}
@@ -106,8 +117,10 @@ public class Tv {
 			record = !record;
 			if (record) {
 				System.out.println("녹화 시작");
+				return;
 			} else if (record == false) {
 				System.out.println("녹화 종료");
+				return;
 			}
 		}
 	}

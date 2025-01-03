@@ -17,8 +17,10 @@ public class TvRemoteControl implements RemoteControl {
 	public void volumeDown(Tv tv) {
 		if (tv.power == false) {
 			alertInfo();
+			return;
 		} else if (tv.power) {
 			tv.volumeDown();
+			return;
 		}
 
 	}
@@ -27,8 +29,10 @@ public class TvRemoteControl implements RemoteControl {
 	public void volumeUp(Tv tv) {
 		if (tv.power == false) {
 			alertInfo();
+			return;
 		} else if (tv.power) {
 			tv.volumeUp();
+			return;
 		}
 	}
 
@@ -36,8 +40,10 @@ public class TvRemoteControl implements RemoteControl {
 	public void channelUp(Tv tv) {
 		if (tv.power == false) {
 			alertInfo();
+			return;
 		} else if (tv.power) {
 			tv.channelUp();
+			return;
 		}
 	}
 
@@ -45,8 +51,10 @@ public class TvRemoteControl implements RemoteControl {
 	public void channelDown(Tv tv) {
 		if (tv.power == false) {
 			alertInfo();
+			return;
 		} else if (tv.power) {
 			tv.channelDown();
+			return;
 		}
 	}
 
@@ -54,9 +62,11 @@ public class TvRemoteControl implements RemoteControl {
 	public void representationInfoButton(Tv tv) {
 		if (tv.power == false) {
 			alertInfo();
+			return;
 		} else if (tv.power) {
 			System.out.println(REMOTE_CONTROL_TV_NAME);
 			System.out.println(tv.toString());
+			return;
 		}
 	}
 
@@ -66,8 +76,10 @@ public class TvRemoteControl implements RemoteControl {
 	{
 		if (tv.power == false) {
 			alertInfo();
+			return;
 		} else if (tv.power) {
 			tv.recordingButton();
+			return;
 		}
 	}
 
@@ -77,8 +89,10 @@ public class TvRemoteControl implements RemoteControl {
 	{
 		if (tv.power == false) {
 			alertInfo();
+			return;
 		} else if (tv.power) {
 			tv.silenceButton();
+			return;
 		}
 	}
 }

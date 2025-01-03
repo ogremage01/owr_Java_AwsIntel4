@@ -9,18 +9,18 @@ public class GameUtil {
 	}
 	
 
-	public boolean isSame(List<Integer> a, int b) {
+	public static boolean isSame(List<Integer> a, int b) {
 		return false;
 	}
 	
 	
 	
-	public int inputNum() {
+	public static int inputNum() {
 		int num=0;
 		return num;
 	}
 	
-	private boolean inNumberRange(int a) {
+	private static boolean inNumberRange(int a) {
 		return false;
 		
 	}

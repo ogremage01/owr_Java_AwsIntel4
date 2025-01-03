@@ -79,7 +79,7 @@ public class Customer {
 		}
 		builder.append("저런 것들이구나\n");
 		builder.append("포인트는 ");
-		builder.append(myBonusPoint+ " 가 있네");
+		builder.append(bonusRoundPrice+ " 가 있네");
 		
 		return builder.toString();
 	}

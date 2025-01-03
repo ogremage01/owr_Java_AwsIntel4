@@ -1,7 +1,5 @@
 package hk.exam.eight;
 
-import java.util.HashMap;
-
 // 면세점
 public class FreeShop {
 
