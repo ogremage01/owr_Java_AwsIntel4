@@ -20,12 +20,12 @@ public class Stadium implements GamePlay {
 	}
 
 	protected int resultStrikes(List<Integer> a, List<Integer> b) {
-		return 1;
+		return 1;//에러메시지 유발 방지
 
 	}
 
 	protected int resultBalls(List<Integer> a, List<Integer> b) {
-		return 1;
+		return 1;//에러메시지 유발 방지
 
 	}
 

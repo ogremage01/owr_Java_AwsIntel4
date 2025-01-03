@@ -2,7 +2,7 @@ package hk.exam.ten;
 
 public class BottleCap {
 	
-	int num = 0;
+	private int num = 0;
 	
 	
 	public BottleCap() {
@@ -10,6 +10,13 @@ public class BottleCap {
 	}
 	BottleCap(int num){
 		this.num=num;
+	}
+	
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
 	}
 
 }

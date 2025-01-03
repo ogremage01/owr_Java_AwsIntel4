@@ -49,10 +49,10 @@ public class GameLogic {
 			playerList.add(pc);
 
 		}
-		bc.num = (int) (Math.random() * 1000) + 1;
-		int up = (bc.num / 100 * 100) + 100;
-		int down = bc.num / 100 * 100;
-		System.out.println(bc.num);
+		bc.setNum((int) (Math.random() * 1000) + 1);
+		int up = (bc.getNum() / 100 * 100) + 100;
+		int down = bc.getNum() / 100 * 100;
+		System.out.println(bc.getNum());
 		int nowplayer = 0;
 		int tryTime = 0;
 
@@ -75,10 +75,10 @@ public class GameLogic {
 				}
 			}
 
-			if (userAnswer == bc.num) {
+			if (userAnswer == bc.getNum()) {
 				playerList.get(nowplayer).passCheck = true;
 				System.out.println(playerList.get(nowplayer).name + "님");
-				System.out.println("병뚜껑 번호" + bc.num + "맞췄습니다.");
+				System.out.println("병뚜껑 번호" + bc.getNum() + "맞췄습니다.");
 				System.out.println("총 시도 횟수는 " + tryTime + "번입니다.");
 				for (int i = 0; i < playerList.size(); i++) {
 					if (playerList.get(i).passCheck) {
@@ -90,20 +90,20 @@ public class GameLogic {
 					}
 				}
 
-				break;
-			} else if (userAnswer > bc.num&&userAnswer<=up) {
+				return;
+			} else if (userAnswer > bc.getNum() && userAnswer <= up) {
 				System.out.println("틀렸습니다. 다음 분은 더 작은 수를 입력해 주세요");
 				up = userAnswer - 1;
 				nowplayer = (nowplayer + 1) % playerList.size();
 
-			} else if (userAnswer < bc.num&&userAnswer>=down) {
+			} else if (userAnswer < bc.getNum() && userAnswer >= down) {
 				System.out.println("틀렸습니다. 다음 분은 더 큰 수를 입력해 주세요");
 				down = userAnswer + 1;
 				nowplayer = (nowplayer + 1) % playerList.size();
 
-			}else if(userAnswer>=up) {
+			} else if (userAnswer >= up) {
 				System.out.println(up + "보다 큰 값을 넣을 수 없습니다.");
-			}else if(userAnswer<=down) {
+			} else if (userAnswer <= down) {
 				System.out.println(down + "보다 작은 값을 넣을 수 없습니다.");
 			}
 
