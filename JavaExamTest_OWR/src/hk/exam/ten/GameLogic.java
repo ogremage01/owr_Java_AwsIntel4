@@ -14,6 +14,7 @@ public class GameLogic {
 	private int tryTime = 0;
 	private int up = 0;
 	private int down = 0;
+	private String name = "";
 
 	public void upAndDown() {
 
@@ -47,8 +48,6 @@ public class GameLogic {
 		}
 		// 참가자 이름 입력
 		for (int i = 0; i < input; i++) {
-
-			String name = "";
 
 			System.out.println(i + "번째 참가자의 이름을 말씀해 주세요.");
 			name = sc.nextLine();
@@ -108,7 +107,7 @@ public class GameLogic {
 			} else if (userAnswer < bc.getNum() && userAnswer >= down) {
 				System.out.println("틀렸습니다. 다음 분은 더 큰 수를 입력해 주세요");
 				down = userAnswer + 1;
-				nowPlayer = (nowPlayer + 1 % playerList.size());
+				nowPlayer = (nowPlayer + 1) % playerList.size();
 
 				// 범위 바깥 오답 시
 			} else if (userAnswer >= up) {
